@@ -1,11 +1,10 @@
-var express = require('express');
 var createError = require('http-errors');
 var helmet = require('helmet');
-
 var path = require('path');
 var express = require('express');
 var logger = require('morgan');
 var compression = require('compression');
+
 
 var indexRouter = require(path.join(__dirname,'routes','index'));
 var usersRouter = require(path.join(__dirname,'routes','users'));
@@ -52,11 +51,5 @@ app.use(function(err, req, res, next) {
     res.status(err.status || 500);
     return res.json({ message: error.message });
 });
-  
-process.on('uncaughtException', function (er) {
-    // do something with this error.  Send a mail to yourself or admins telling the cause.
-    console.error(er.stack)
-    process.exit(1)
-});
-
+    
 module.exports = app;

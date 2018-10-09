@@ -27,8 +27,9 @@ Compilation of a few standard practices for deploying ExpressJs app to productio
 
 7. Structure of code folders itself.
 8. Follow security best practices by Expressjs.com by using Helmet.
-
-
+9. Health Monitoring
+- godaddy's terminus is recommended by ExpressJs 
+- Terminus works dope with kubernetes.
 
 
 
