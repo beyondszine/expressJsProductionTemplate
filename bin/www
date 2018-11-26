@@ -7,7 +7,9 @@
 var app = require('../app');
 var debug = require('debug')('expressjsproductiontemplate:server');
 var http = require('http');
+const path = require('path');
 const { createTerminus, HealthCheckError } = require('@godaddy/terminus');
+require('dotenv').config({path : path.resolve(process.cwd(), '.env')});
 
 
 /**

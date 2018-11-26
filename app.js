@@ -15,7 +15,7 @@ app.use(compression({filter: shouldCompress}));
 app.use(helmet());
 
 function shouldCompress (req, res) {
-    console.log("compared!");
+    // console.log("compared!");
   if (req.headers['x-no-compression']) {
     // Make some case when you don't need compression i.e via matching up some header and using compression middleware accordingly.
     return false;
